@@ -7,7 +7,8 @@
 <div class="container">
         <div class="card padding">
             <header>
-                <h4> Crear Nuevo Producto<h4>
+                <h4> Editar Producto<h4>
+            
             </header>
 
             <div class="card-body">
