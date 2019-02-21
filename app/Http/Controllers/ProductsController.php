@@ -4,18 +4,36 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-
+use App\Http\Resources\ProductsCollection;
 class ProductsController extends Controller
 {
+
+
+        public function __construct(){
+            $this->middleware('auth',['except'=>['index','show']]);
+
+        }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $products = Product::paginate(1);
+        $products = Product::paginate(15);
+
+      if($request->wantsJson()){
+
+               //return $products->toJson();
+
+               return new ProductsCollection( $products);
+              
+        }
 
         return view('products.index',["products"=>  $products  ]);
     }
@@ -67,6 +85,9 @@ class ProductsController extends Controller
     public function show($id)
     {
         //
+        $product=Product::find($id);
+        
+        return view("products.show",["product"=>$product]);
     }
 
     /**
@@ -116,5 +137,8 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+        
+        $product = Product::destroy($id);
+        return redirect('/productos');
     }
 }
