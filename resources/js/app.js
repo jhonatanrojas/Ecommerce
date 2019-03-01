@@ -23,7 +23,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('products-component', require('./components/products/productsComponent.vue').default);
 Vue.component('product-card', require('./components/products/products-card-component.vue').default);
-
+Vue.component('materal-transition', require('./components/animations/transitionComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
