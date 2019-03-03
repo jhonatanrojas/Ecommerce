@@ -8,7 +8,7 @@
         @enter="enter" 
         @before-enter="beforeEnter"
         @leave="leave"
-         class="row">
+         class="row ">
             <product-card :data-index="index" v-bind:product="product" v-for="(product,index) in products" :key="product.id" >
 
 

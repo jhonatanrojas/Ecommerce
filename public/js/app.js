@@ -36841,23 +36841,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card col-xs-12  col-sm-10  col-md-4" }, [
-    _c("header", { staticClass: "padding text-center bg-primary" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "card-body padding" }, [
-      _c("h2", { staticClass: "card-title" }, [
-        _vm._v(" " + _vm._s(_vm.product.title))
-      ]),
+  return _c(
+    "div",
+    { staticClass: "card col-xs-12  col-sm-10  col-md-3  marginl " },
+    [
+      _c("header", { staticClass: "padding text-center bg-primary" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "card-subtitle" }, [
-        _vm._v(" " + _vm._s(_vm.product.humanPrice))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-subtitle" }, [
-        _vm._v(" " + _vm._s(_vm.product.description))
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", { staticClass: "card-title" }, [
+          _vm._v(" " + _vm._s(_vm.product.title))
+        ]),
+        _vm._v(" "),
+        _c("h4", { staticClass: "card-subtitle" }, [
+          _vm._v(" " + _vm._s(_vm.product.humanPrice))
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "card-subtitle" }, [
+          _vm._v(" " + _vm._s(_vm.product.description))
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -36887,7 +36891,7 @@ var render = function() {
       _c(
         "transition-group",
         {
-          staticClass: "row",
+          staticClass: "row ",
           attrs: { tag: "div", css: false, name: "fadeIn" },
           on: {
             enter: _vm.enter,
